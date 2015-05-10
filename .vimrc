@@ -31,6 +31,11 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " My Bundles here:
 " Refer to |:NeoBundle-examples|.
 " Note: You don't set neobundle setting in .gvimrc!
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'edsono/vim-matchit'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'vim-scripts/jade.vim'
+NeoBundle 'nathanaelkane/vim-indent-guides'
 
 call neobundle#end()
 
@@ -39,12 +44,4 @@ filetype plugin indent on
 
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
-
-NeoBundle 'Shougo/unite.vim'           " filer
-NeoBundle 'mattn/emmet-vim'            " assist coding HTML
-NeoBundle 'edsono/vim-matchit'         " jump HTML tag
-NeoBundle 'scrooloose/syntastic'       " syntax checker
-
-
 NeoBundleCheck
-
