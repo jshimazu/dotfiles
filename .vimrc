@@ -10,6 +10,9 @@ autocmd QuickFixCmdPost *grep* cwindow
 filetype plugin on
 filetype indent on
 
+" NERDTreeキーマップ
+nnoremap <silent><C-e> :NERDTreeToggle<CR> 
+
 " netrwの設定
 let g:netrw_liststyle = 3
 
@@ -50,6 +53,7 @@ NeoBundle 'vim-scripts/jade.vim'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'mattn/gist-vim', {'depends': 'mattn/webapi-vim'}
+NeoBundle 'scrooloose/nerdtree'
 
 call neobundle#end()
 
