@@ -19,8 +19,8 @@ let g:netrw_liststyle = 3
 " vim-indent-guidesの設定
 colorscheme default
 let g:indent_guides_auto_colors=0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd   guibg=red    ctermbg=237
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven  guibg=green  ctermbg=233
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd   guibg=red    ctermbg=239
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven  guibg=green  ctermbg=235
 let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_guide_size=1
 
@@ -54,6 +54,7 @@ NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'mattn/gist-vim', {'depends': 'mattn/webapi-vim'}
 NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'slim-template/vim-slim'
 
 call neobundle#end()
 
