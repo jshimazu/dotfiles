@@ -55,6 +55,7 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'mattn/gist-vim', {'depends': 'mattn/webapi-vim'}
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'slim-template/vim-slim'
+NeoBundle 'wavded/vim-stylus'
 
 call neobundle#end()
 
