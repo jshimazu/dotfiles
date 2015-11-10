@@ -57,6 +57,14 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'slim-template/vim-slim'
 NeoBundle 'wavded/vim-stylus'
 
+
+"改行文字とタブ文字を表示
+set list
+set listchars=tab:>-,eol:$
+"改行文字とタブ文字の色設定（NonTextが改行、SpecialKeyがタブ）
+hi NonText guibg=NONE guifg=DarkGreen
+hi SpecialKey guibg=NONE guifg=Gray40
+
 call neobundle#end()
 
 " Required:
