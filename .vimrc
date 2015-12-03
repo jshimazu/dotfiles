@@ -56,6 +56,8 @@ NeoBundle 'mattn/gist-vim', {'depends': 'mattn/webapi-vim'}
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'slim-template/vim-slim'
 NeoBundle 'wavded/vim-stylus'
+NeoBundle 'kakkyz81/evervim'
+NeoBundle 'vim-ruby/vim-ruby'
 
 
 "改行文字とタブ文字を表示
