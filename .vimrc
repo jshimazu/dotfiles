@@ -50,6 +50,7 @@ NeoBundle 'mattn/emmet-vim'
 NeoBundle 'edsono/vim-matchit'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'vim-scripts/jade.vim'
+NeoBundle 'digitaltoad/vim-pug'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'mattn/gist-vim', {'depends': 'mattn/webapi-vim'}
@@ -58,6 +59,23 @@ NeoBundle 'slim-template/vim-slim'
 NeoBundle 'wavded/vim-stylus'
 NeoBundle 'kakkyz81/evervim'
 NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'nikvdp/ejs-syntax'
+NeoBundle 'elzr/vim-json'
+NeoBundle 'fatih/vim-go'
+NeoBundle 'mxw/vim-jsx'
+
+" jade > pug
+au BufRead,BufNewFile,BufReadPre *.jade set filetype=pug 
+
+" ejs
+function! s:DetectEjs()
+    if getline(1) =~ '^#!.*\<ejs\>'
+        set filetype=ejs
+    endif
+endfunction
+
+autocmd BufNewFile,BufRead * call s:DetectEjs()
 
 
 "改行文字とタブ文字を表示
