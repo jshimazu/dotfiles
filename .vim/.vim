@@ -1,0 +1,1 @@
+/Users/shimazu-junya/dotfiles/.vim
