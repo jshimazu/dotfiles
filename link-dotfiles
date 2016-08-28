@@ -6,5 +6,6 @@ mkdir -p ~/.vim/bundle
 
 ln -sf ~/dotfiles/.vimrc ~/.vimrc
 ln -sf ~/dotfiles/.vim ~/.vim
+ln -sf ~/dotfiles/.mac-local-provisioning ~/.mac-local-provisioning
 
 git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim

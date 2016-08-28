@@ -1,0 +1,92 @@
+- hosts: localhost
+  connection: local
+  gather_facts: no
+  sudo: no
+  homebrew_update=no
+  vars:
+    homebrew_taps:
+      - caskroom/cask/brew-cask
+      - rbenv/rbenv
+    homebrew_cask_packages:
+      - gyazo
+    homebrew_packages:
+      - { name: git }
+      - { name: apr }
+      - { name: apr-util }
+      - { name: autoconf }
+      - { name: boot2docker }
+      - { name: ctags }
+      - { name: docker }
+      - { name: expect }
+      - { name: ffmpeg }
+      - { name: freetype }
+      - { name: fribidi }
+      - { name: gawk }
+      - { name: gettext }
+      - { name: git }
+      - { name: git-flow }
+      - { name: gnu-sed }
+      - { name: go }
+      - { name: graphviz }
+      - { name: httpd22 }
+      - { name: hub }
+      - { name: icu4c }
+      - { name: imagemagick }
+      - { name: jpeg }
+      - { name: jpegoptim }
+      - { name: jq }
+      - { name: lame }
+      - { name: libpng }
+      - { name: libtiff }
+      - { name: libtool }
+      - { name: libvo-aacenc }
+      - { name: libxml2 }
+      - { name: libyaml }
+      - { name: lynx }
+      - { name: mcrypt }
+      - { name: mhash }
+      - { name: mongodb }
+      - { name: mplayer }
+      - { name: mysql }
+      - { name: nginx }
+      - { name: nkf }
+      - { name: node }
+      - { name: oniguruma }
+      - { name: openssl }
+      - { name: pcre }
+      - { name: perl-build }
+      - { name: pkg-config }
+      - { name: plenv }
+      - { name: pngquant }
+      - { name: postgresql }
+      - { name: pyenv }
+      - { name: rbenv }
+      - { name: readline }
+      - { name: redis }
+      - { name: rename }
+      - { name: rlwrap }
+      - { name: ruby-build }
+      - { name: s3cmd }
+      - { name: sl }
+      - { name: tig }
+      - { name: translate-shell }
+      - { name: tree }
+      - { name: unixodbc }
+      - { name: wget }
+      - { name: x264 }
+      - { name: xvid }
+      - { name: xz }
+      - { name: youtube-dl }
+      - { name: zlib }
+  tasks:
+    # update homebrew
+    - name: update homebrew
+      homebrew: update_homebrew=yes
+    # brew instal
+    - name: install homebrew packages
+      homebrew: name="{{ item.name }}" state="{{ item.state|default('latest') }}" install_options="{{ item.install_options|default() }}"
+      with_items: homebrew_packages
+    # brew cask install
+    - name: install homebrew cask packages
+      homebrew_cask: name="{{ item }}" state=present
+      with_items: homebrew_cask_packages
