@@ -2,8 +2,8 @@
   connection: local
   gather_facts: no
   sudo: no
-  homebrew_update=no
   vars:
+    homebrew_update: no
     homebrew_taps:
       - caskroom/cask/brew-cask
       - rbenv/rbenv
