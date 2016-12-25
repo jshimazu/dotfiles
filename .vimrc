@@ -5,6 +5,7 @@ set shiftwidth=4
 syntax on
 set hlsearch
 set list
+set clipboard=unnamed,autoselect
 autocmd QuickFixCmdPost *grep* cwindow
 
 filetype plugin on
@@ -64,6 +65,8 @@ NeoBundle 'nikvdp/ejs-syntax'
 NeoBundle 'elzr/vim-json'
 NeoBundle 'fatih/vim-go'
 NeoBundle 'mxw/vim-jsx'
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'mxw/vim-jsx'
 
 " jade > pug
 au BufRead,BufNewFile,BufReadPre *.jade set filetype=pug 
@@ -76,6 +79,9 @@ function! s:DetectEjs()
 endfunction
 
 autocmd BufNewFile,BufRead * call s:DetectEjs()
+
+" jbuilder syntax highlighting
+au BufNewFile,BufRead *.json.jbuilder set ft=ruby
 
 
 "改行文字とタブ文字を表示
