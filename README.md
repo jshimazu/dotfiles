@@ -1,6 +1,6 @@
 # dotfiles
 
-## Usage
+## Getting Started
 
 ### make symlink & clone bundler
 
