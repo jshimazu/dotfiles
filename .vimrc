@@ -1,8 +1,8 @@
 " 共通設定
+syntax on
 set tabstop=4
 set expandtab
 set shiftwidth=4
-syntax on
 set hlsearch
 set list
 set clipboard=unnamed,autoselect
@@ -10,7 +10,6 @@ autocmd QuickFixCmdPost *grep* cwindow
 
 filetype plugin on
 filetype indent on
-
 " NERDTreeキーマップ
 nnoremap <silent><C-e> :NERDTreeToggle<CR> 
 
@@ -56,6 +55,8 @@ NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'mattn/gist-vim', {'depends': 'mattn/webapi-vim'}
 NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'slim-template/vim-slim'
 NeoBundle 'wavded/vim-stylus'
 NeoBundle 'kakkyz81/evervim'
@@ -65,8 +66,21 @@ NeoBundle 'nikvdp/ejs-syntax'
 NeoBundle 'elzr/vim-json'
 NeoBundle 'fatih/vim-go'
 NeoBundle 'mxw/vim-jsx'
-NeoBundle 'pangloss/vim-javascript'
+" NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'mxw/vim-jsx'
+NeoBundle 'IN3D/vim-raml'
+
+""""""""""""""""""""""""""""""
+" Unit.vimの設定
+""""""""""""""""""""""""""""""
+" 入力モードで開始する
+" let g:unite_enable_start_insert=1
+" バッファ一覧
+noremap :buf<CR> :Unite buffer<CR>
+" ファイル一覧
+noremap :files<CR> :Unite -buffer-name=file file<CR>
+" 最近使ったファイルの一覧
+noremap :log<CR> :Unite file_mru<CR>
 
 " jade > pug
 au BufRead,BufNewFile,BufReadPre *.jade set filetype=pug 
@@ -83,7 +97,6 @@ autocmd BufNewFile,BufRead * call s:DetectEjs()
 " jbuilder syntax highlighting
 au BufNewFile,BufRead *.json.jbuilder set ft=ruby
 
-
 "改行文字とタブ文字を表示
 set list
 set listchars=tab:>-,eol:$
@@ -92,6 +105,7 @@ hi NonText guibg=NONE guifg=DarkGreen
 hi SpecialKey guibg=NONE guifg=Gray40
 
 call neobundle#end()
+
 
 " Required:
 filetype plugin indent on
