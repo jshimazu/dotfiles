@@ -7,6 +7,7 @@
     homebrew_taps:
       - caskroom/cask/brew-cask
       - rbenv/rbenv
+      - d12frosted/emacs-plus
     homebrew_cask_packages:
       - gyazo
     homebrew_packages:
