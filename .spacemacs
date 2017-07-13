@@ -299,6 +299,7 @@ values."
    dotspacemacs-whitespace-cleanup nil
    ;; whitespaceの可視化
    spacemacs-show-trailing-whitespace nil
+   ruby-insert-encoding-magic-comment nil
    ))
 
 (defun dotspacemacs/user-init ()
