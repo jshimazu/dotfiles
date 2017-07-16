@@ -55,6 +55,7 @@ values."
      spell-checking
      ;; syntax-checking
      version-control
+     react
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -312,13 +313,14 @@ before packages are loaded. If you are unsure, you should try in setting them in
   )
 
 (defun dotspacemacs/user-config ()
-  (editorconfig-mode 1)
   "Configuration function for user code.
 This function is called at the very end of Spacemacs initialization after
 layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
+  (editorconfig-mode 1)
+  (spacemacs/toggle-indent-guide-globally-on)
   )
   ;; copy & paste to from clipboard
   ;; http://qiita.com/taumu/items/f03a1b0c579c4934bd31

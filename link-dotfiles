@@ -7,5 +7,6 @@
 ln -sf ~/dotfiles/.mac-local-provisioning ~/.mac-local-provisioning
 ln -sf ~/dotfiles/.spacemacs ~/.spacemacs
 ln -sf ~/dotfiles/.bash_profile ~/.bash_profile
+ln -sf ~/dotfiles/.editorconfig ~/.editorconfig
 
-git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+# git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
