@@ -45,10 +45,10 @@ export PATH=$PATH:/Users/shimazu-junya/bin
 export LSCOLORS=xxbfxcxdxbxegedabagacad
 
 # docker
-export DOCKER_TLS_VERIFY=1
-export DOCKER_MACHINE_NAME=default
-export DOCKER_HOST=tcp://192.168.99.100:2376
-export DOCKER_CERT_PATH=/Users/shimazu-junya/.docker/machine/machines/default
+# export DOCKER_TLS_VERIFY=1
+# export DOCKER_MACHINE_NAME=default
+# export DOCKER_HOST=tcp://192.168.99.100:2376
+# export DOCKER_CERT_PATH=/Users/shimazu-junya/.docker/machine/machines/default
 
 # iTerm
 #export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}: ${PWD/#$HOME/~}\010"'

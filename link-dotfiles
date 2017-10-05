@@ -6,6 +6,7 @@
 # ln -sf ~/dotfiles/.vim ~/.vim
 ln -sf ~/dotfiles/.mac-local-provisioning ~/.mac-local-provisioning
 ln -sf ~/dotfiles/.spacemacs ~/.spacemacs
+ln -sf ~/dotfiles/.emacs.d/init.el ~/.emacs.d/init.el
 ln -sf ~/dotfiles/.bash_profile ~/.bash_profile
 ln -sf ~/dotfiles/.editorconfig ~/.editorconfig
 
